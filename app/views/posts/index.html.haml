@@ -1,5 +1,42 @@
 .top__heder
-  %h1
-    = "シンプルに日用品、食品を管理して楽しよう"
+  .top__heder__title
+    %h1
+      = "HiBi管"
+    %li
+      = "非常食・日用品をスキマ時間にシンプルに管理しよう"
+  .top__heder__btn
+    .top__heder__btn__right
+      %li
+        = link_to "ログイン",'/#'
+    .top__heder__btn__left
+      %li
+        = link_to "新規登録",'/#'
 .top__main
-.top__footer
+  .top__main__contents
+    .top__main__contents__question
+      %ul
+        %li
+          = "こんな経験ありませんか？"
+        %li
+          = "せっかく買い物行ったのに買い忘れた！"
+        %li
+          = "賞味期限まだいけると思っていたら期限切れてた..."
+        %li
+          = "非常食買ったは良いけど、期限や在庫確認するの面倒..."
+        %li
+          = "そんなあなた、試しに使ってみてはいかがでしょうか"
+    .top__main__contents__use
+      .top__main__contents__use__box
+        %h1
+          = "ご利用方法"
+        %ul
+          %li
+            = "①　アカウントの作成。メールアドレスとニックネームを入力するだけでOK"
+          %li
+            = "②　登録したい商品の名前、個数、賞味期限、写真を登録"
+          %li
+            = "③　管理する必要が無くなったものは削除OK"
+          %li
+            = "④　登録した商品の情報は後から編集可能"
+.wrapper
+  = render "footer"
