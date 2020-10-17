@@ -1,14 +1,18 @@
-.top__heder
-  .top__heder__title
+.top__header
+  .top__header__title
     %h1
       = "HiBi管"
     %li
       = "非常食・日用品をスキマ時間にシンプルに管理しよう"
-  .top__heder__btn
-    .top__heder__btn__left
-      = link_to "ログイン",'/#'
-    .top__heder__btn__right
-      = link_to "新規登録",'/#'
+  .top__header__sign
+    - if user_signed_in?
+      .top__header__sign__btn
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      .top__header__sign__btn
+        = link_to "ログイン", new_user_session_path, method: :get
+      .top__header__sign__btn
+        = link_to "新規登録", new_user_registration_path, method: :get
 .top__main
   .top__main__contents
     .top__main__contents__question

@@ -10,7 +10,7 @@ a {
   color: inherit;
 }
 
-.top__heder{
+.top__header{
   background-color: #ffffff;
   width: 100%;
 
@@ -22,7 +22,7 @@ a {
     }
   }
 
-  &__btn{
+  &__sign{
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
@@ -31,19 +31,12 @@ a {
     line-height: 30px;
     color: #ffffff;
 
-    &__left{
+    &__btn{
       width: 100px;
       height: 30px;
       background-color: #ff0033;
       text-align: center;
-    }
-
-    &__right{
-      width: 100px;
-      height: 30px;
-      background-color: #ff0033;
-      margin: 0px 10px;
-      text-align: center;
+      margin-right: 10px;
     }
   }
   a{
