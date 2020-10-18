@@ -1,0 +1,39 @@
+.sign__main
+  .sign__main__contents
+    = form_for(@user, url: user_registration_path) do |f|
+      = render "devise/shared/error_messages", resource: @user
+      .sign-main__header
+        新規会員情報入力
+      .sign-profile__header
+        %ul
+          %li ※安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません
+      .sign-form
+        .sign-form__box
+          .require
+            %span.require__list ニックネーム
+            %span.require__form 必須
+          .input_form
+            = f.text_field :name, autofocus: true, class: "form_text", placeholder: "例)サンプル一郎"
+        .sign-form__box
+          .require
+            %span.require__list メールアドレス
+            %span.require__form 必須
+          .input_form
+            = f.email_field :email, class: "form_text", placeholder: "@,ドメイン必須になります" , autofocus: true, autocomplete: "email"
+        .sign-form__box
+          .require
+            %span.require__list パスワード
+            %span.require__form 必須
+          .input_form
+            = f.password_field :password, class: "form_text", placeholder: "英数字含む７文字以上" , autocomplete: "new-password"
+        .sign-form__box
+          .require
+            %span.require__list 確認用パスワード
+            %span.require__form 必須
+          .input_form
+            = f.password_field :password_confirmation, class: "form_text", placeholder: "確認の為、再度パスワードを入力" , autocomplete: "new-password"
+        %li ※英字と数字の両方を含めて入力してください
+        .actions
+          = f.submit "登録する", class: "submit-btn"
+.sign-footer
+  = render "posts/footer"
