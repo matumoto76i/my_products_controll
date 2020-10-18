@@ -9,7 +9,7 @@
       .top__header__sign__btn
         = link_to "ログアウト", destroy_user_session_path, method: :delete
       .top__header__sign__btn
-        = link_to "マイページ", '/#/'
+        = link_to "マイページ", "/users/#{current_user.id}"
     - else
       .top__header__sign__btn
         = link_to "ログイン", new_user_session_path, method: :get
