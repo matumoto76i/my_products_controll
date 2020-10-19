@@ -1,2 +1,15 @@
-%h1
-  = "こんにちは"
+.mypage
+  .mypage__header
+    .mypage__header__title
+      %h1
+        = "HiBi管"
+    .mypage__header__contents
+      .mypage__header__contents__myname
+        %p
+          = "ユーザーnameさんのmypage"
+      .mypage__header__contents__out
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+  .mypage__main
+  
+.mypage__footer
+  = render "/posts/footer"

@@ -1,0 +1,43 @@
+.mypage{
+  padding: 20px;
+
+  &__header{
+    width: 100%;
+
+    &__title{
+      text-align: center;
+      font-size: 50px;
+    }
+
+    &__contents{
+      display: flex;
+      justify-content: space-between;
+
+      &__myname{
+        height: 50px;
+        font-size: 25px;
+        background-color: #3ccace;
+        color: #ffffff;
+        border: 1px #3ccace solid;
+        border-radius: 100px;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      &__out{
+        height: 50px;
+        font-size: 25px;
+        background-color: #ff0033;
+        text-align: center;
+        line-height: 50px;
+        color: #ffffff;
+
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
