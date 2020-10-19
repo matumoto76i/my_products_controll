@@ -40,4 +40,70 @@
       }
     }
   }
+
+  &__main{
+    padding-top: 50px;
+
+    &__btns{
+
+      &__product{
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+
+        &__left{
+          width: 350px;
+          background-color: #33ffff;
+          font-size: 30px;
+          text-align: center;
+          line-height: 50px;
+          box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.16);
+          border: groove;
+        }
+
+        &__right{
+          width: 350px;
+          background-color: #33ff66;
+          font-size: 30px;
+          text-align: center;
+          line-height: 50px;
+          box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.16);
+          border: groove;
+        }
+      }
+
+      &__myuser{
+        margin-top: 30px;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+
+        &__left{
+          width: 350px;
+          background-color: #33ffff;
+          font-size: 30px;
+          text-align: center;
+          line-height: 50px;
+          box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.16);
+          border: groove;
+        }
+
+        &__right{
+          width: 350px;
+          background-color: #33ff66;
+          font-size: 30px;
+          text-align: center;
+          line-height: 50px;
+          box-shadow: 0 0 3 3 rgba(0, 0, 0, 0.16);
+          border: groove;
+        }
+      }
+    }
+  }
+}
+
+a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }

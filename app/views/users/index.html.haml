@@ -10,6 +10,16 @@
       .mypage__header__contents__out
         = link_to "ログアウト", destroy_user_session_path, method: :delete
   .mypage__main
-  
+    .mypage__main__btns
+      .mypage__main__btns__product
+        .mypage__main__btns__product__left
+          = link_to "商品を登録する", '/#/'
+        .mypage__main__btns__product__right
+          = link_to "登録した商品の一覧", '/#/'
+      .mypage__main__btns__myuser
+        .mypage__main__btns__myuser__left
+          = link_to "メールアドレスの変更", '/#/'
+        .mypage__main__btns__myuser__right
+          = link_to "トップに戻る", root_path
 .mypage__footer
   = render "/posts/footer"
