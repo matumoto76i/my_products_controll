@@ -28,20 +28,20 @@ Things you may want to cover:
 # items_table
 |column|Type|Options|
 |------|----|-------|
-|name       |string|
+|name       |string| null: false               |
 |remarks    |text|
 |shop       |text|
-|quantity   |integer|
+|deadline   |date|
+|quantity   |integer| null: false              |
 |user       |references|null: false, foregin_key: true|
 |category   |references|null: false, foregin_key: true|
-|deadline_id(active_hash) |integer|null: false, foregin_key: true|
+
 
 ## Association
 
 - belongs_to :user
 - belongs_to :category
 - belongs_to_active_hash :size
-- belongs_to_active_hash :deadline
 - has_many :images
 
 # categories_table
@@ -54,15 +54,6 @@ Things you may want to cover:
 ## Association
 - has_many :item
 - has_ancestry
-
-# deadline_table
-
-| column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| deadline | string | null: false |
-
-## Association
-- has_many :item
 
 # images_table
 
