@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   
   resources :posts, only: [:index]
   resources :users, only: [:index, :show]
+  resources :items
 end

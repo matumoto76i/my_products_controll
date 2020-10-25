@@ -1,0 +1,80 @@
+.items__header
+  = render "header"
+.items
+  .items__main
+    .main_nav
+      .main_nav__list
+        = link_to "FURIMA",'/#'
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to "カテゴリー",'/#'
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to "服のサイズなど",'/#'
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to "ジャンル",'/#'
+      .main_nav__next
+        >
+      .main_nav__list
+    .items__main__contents
+      .item_box
+        .item_box__name
+          商品名
+        .item_box__images
+          .item_box__show_image
+            = image_tag "pict/sample1.jpeg", class: "list__image"
+          .item_box__small_lists
+            .item_box__list
+              = image_tag "pict/sample2.jpeg", class: "list__image"
+        .items_box__table
+          %table
+            %tr
+              %th
+                商品名
+              %td
+                六甲の美味しい水
+            %tr
+              %th
+                カテゴリー
+              %td
+                =link_to "飲料"
+            %tr
+              %th
+                買ったお店
+              %td
+                ドラッグストア
+            %tr
+              %th
+                消費期限
+              %td
+                2030年5月1日
+            %tr
+              %th
+                個数、本数
+              %td
+                10本
+            %tr
+              %th
+                備考欄
+              %td
+                全部２リットルだよ
+      .comment_box
+        = form_tag root_path do
+          .comment_contents
+            %textarea.new_comment
+            %p
+              丁寧なコメントを心がけましょう。<br>不快な言葉遣いなどは利用制限や退会処分となる事があります。
+            %button{type: "submit", class: "comment_btn"}
+              %i.fa.fa-comment
+                コメントをする
+    .links
+      %li
+        = link_to "< 前の商品",'/#'
+      %li
+        = link_to "後ろの商品 >",'/#'
+  .items__footer
+    = render "/posts/footer"
