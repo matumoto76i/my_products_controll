@@ -1,36 +1,39 @@
-.items__header
-  = render "header"
 .items
+  .items__header
+    = render "header"
   .items__main
     .main_nav
       .main_nav__list
-        = link_to "FURIMA",'/#'
+        = link_to "TOP",'/#'
       .main_nav__next
         >
       .main_nav__list
-        = link_to "カテゴリー",'/#'
+        = link_to "親カテゴリー",'/#'
       .main_nav__next
         >
       .main_nav__list
-        = link_to "服のサイズなど",'/#'
+        = link_to "子カテゴリー",'/#'
       .main_nav__next
         >
       .main_nav__list
-        = link_to "ジャンル",'/#'
+        = link_to "孫カテゴリー",'/#'
       .main_nav__next
         >
       .main_nav__list
+        商品名
     .items__main__contents
       .item_box
         .item_box__name
           商品名
         .item_box__images
-          .item_box__show_image
+          .item_box__images__big
             = image_tag "pict/sample1.jpeg", class: "list__image"
-          .item_box__small_lists
-            .item_box__list
+          .item_box__images__lists
+            .image__list
               = image_tag "pict/sample2.jpeg", class: "list__image"
-        .items_box__table
+            .image__list
+              = image_tag "pict/sample2.jpeg", class: "list__image"
+        .item_box__table
           %table
             %tr
               %th
@@ -51,12 +54,12 @@
               %th
                 消費期限
               %td
-                2030年5月1日
+                2021年4月1日
             %tr
               %th
                 個数、本数
               %td
-                10本
+                6本
             %tr
               %th
                 備考欄
@@ -64,17 +67,17 @@
                 全部２リットルだよ
       .comment_box
         = form_tag root_path do
-          .comment_contents
+          .comment_box__contents
             %textarea.new_comment
             %p
               丁寧なコメントを心がけましょう。<br>不快な言葉遣いなどは利用制限や退会処分となる事があります。
             %button{type: "submit", class: "comment_btn"}
               %i.fa.fa-comment
                 コメントをする
-    .links
-      %li
-        = link_to "< 前の商品",'/#'
-      %li
-        = link_to "後ろの商品 >",'/#'
+      .links
+        %li
+          = link_to "< 親カテゴリーに戻る",'/#'
+        %li
+          = link_to "商品一覧に戻る >",'/#'
   .items__footer
     = render "/posts/footer"

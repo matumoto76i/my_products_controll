@@ -1,0 +1,201 @@
+.items{
+  background-color: #eeeeee;
+
+  .items_header {
+    background-color: #ffffff;
+    
+    &__inner{
+      width: 800px;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+
+
+      .icon {
+        padding-bottom: 10px;
+        
+        .header_logo {
+          width: 100px;
+          height: 40px;
+
+          a{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      h1{
+        font-size: 40px;
+
+      }
+    }
+    .search__box {
+      height: 50px;
+      width: 800px;
+      margin: 0 auto;
+
+      &__input {
+        width: calc(100% - 36px);
+        height: 36px;
+        padding: 0 0 0 5px;
+      }
+
+      &__btn {
+        width: 30px;
+        height: 36px;
+        border: 0;
+        padding: 8px;
+        background-color: #3ccace;
+
+        .seach_icon {
+          width: 100%;
+          height: 20px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+
+
+  &__main{
+
+    // ナビゲーション
+    .main_nav{
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+      background-color: #ffffff;
+      border-top: solid 1px #eee;
+      padding: 0px 60px;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+      line-height: 50px;
+      border-bottom: groove;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    
+      &__list {
+        padding: 10px;
+    
+        a:hover {
+          color: #3ccace;
+        }
+      }
+    }
+
+    &__contents{
+      width: 100%;
+      background-color: #eeeeee;
+
+      .item_box{
+        width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+
+        &__name{
+          text-align: center;
+          font-size: 30px;
+        }
+
+        // 画像表示に関するCSS
+        &__images{
+          width: 100%;
+          margin: 0 auto;
+
+          &__big{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+
+            .list__image{
+              width: 500px;
+              height: 400px;
+            }
+          }
+
+          &__lists{
+            width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+            .image__list{
+              text-align: center;
+              margin-right: 10px;
+
+              .list__image{
+                width: 100px;
+                height: auto;
+              }
+            }
+          }
+        }
+
+        &__table {
+          border: 1px #cccccc;
+          padding: 0 100px;
+
+          tr {
+            height: 20px;
+
+            th {
+              width: 152px;
+              text-align: center;
+              border: 1px #cccccc solid;
+              background-color: #eeeeee;
+            }
+
+            td {
+              width: 467px;
+              text-align: start;
+              line-height: 20px;
+              border: 1px #cccccc solid;
+              padding: 15px;
+            }
+
+            a {
+              color: #3ccace;
+            }
+          }
+        }
+      }
+
+      .comment_box{
+        width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+
+        &__contents{
+          text-align: center;
+
+          .new_comment{
+            margin-top: 20px;
+            width: 600px;
+            height: 75px;
+            padding: 10px;
+          }
+
+          .comment_btn{
+            width: 400px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #ff0000;
+            color: #55ffff;
+
+          }
+        }
+      }
+
+      .links{
+        width: 800px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
