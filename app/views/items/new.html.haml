@@ -1,0 +1,66 @@
+.new_header
+  = render 'header'
+.new_main
+  .new_main__content
+    = form_with model: @item, class: "form" do |f|
+      .new_main__content__image
+        .info-name
+          = f.label :登録画像
+          %span.required 必須
+          .form-image__text 最大5枚までアップロードできます
+          = f.fields_for :images do |i|
+            .cleafix
+              %ul#previews
+                %li.input
+                  %label.upload-label
+                    %p クリックしてファイルをアップロード
+                    .input-area
+                      = i.file_field :image, class: "hidden image_upload"
+      .new_main__content__info
+        .item-detail
+          %p 登録内容
+          <br>
+        #category.category
+          .category-name
+            =f.label :カテゴリー
+            %span.required 必須
+            #category_content.category-form
+              = f.collection_select :category_id, @category_parents, :id, :name, { include_blank: "選択してください", selected:"" }, id: "category_form", class: "form-text"
+            #children-box.category-form 
+            #grandchildren-box.category-form 
+        .info_box
+          .info_box__name
+            = f.label :商品名
+            %span.required 必須
+          .info_box__form
+            = f.text_field :name, class: "form-text", placeholder: '40文字まで'
+        .info_box
+          .info_box__name
+            = f.label :消費期限
+            %span.required 必須
+          .info_box__form
+            = f.text_field :deadline, class: "form-text", placeholder: '40文字まで'
+        .info_box
+          .info_box__name
+            =f.label :購入店舗
+            %span.optional 任意
+          .info_box__form
+            = f.text_field :shop, class: "form-text", placeholder: "例)スーパー"
+        .info_box
+          .info_box__name
+            = f.label :個数
+            %span.required 必須
+          .quantity-form
+            = f.number_field :quantity, placeholder: "0", class: "quantity-number"
+            %span 個
+        .info_box
+          .info_box__name
+            = f.label :備考記入欄
+            %span.required 必須
+          .info_box__form
+            = f.text_area :remarks, class: "form-area", placeholder: "商品の説明""(色、素材、重さ、定価、注意点など)"
+      .send-btn
+        = f.submit 'この内容で登録する', class: "send-btn__form"
+        = link_to 'トップにもどる', root_path, class: "send-btn__back"
+.footer_new
+  = render '/posts/footer'

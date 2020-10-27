@@ -13,10 +13,11 @@
   .mypage__main
     .mypage__main__btns
       .mypage__main__btns__product
-        .mypage__main__btns__product__left
-          = link_to "商品を登録する", '/#/'
+        = link_to new_item_path, method: :get do
+          .mypage__main__btns__product__left
+            商品を登録する
         .mypage__main__btns__product__right
-          = link_to "登録した商品の一覧", '/#/'
+          = link_to "登録品一覧", '/#/'
       .mypage__main__btns__myuser
         .mypage__main__btns__myuser__left
           = link_to "メールアドレスの変更", '/#/'

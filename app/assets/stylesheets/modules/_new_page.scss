@@ -1,0 +1,160 @@
+.new_main{
+
+  &__content{
+    background-color: #fff;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__image{
+      padding: 40px;
+      border-bottom: #aaaaaa 1px solid;
+    }
+
+    &__info {
+      padding: 40px;
+
+      .info_box{
+        margin-bottom: 30px;
+
+        &__form{
+          height: 50px;
+          
+          .form-area {
+            border: 1px solid #ccc;
+            height: 125px;
+            width: 620px;
+            margin-top: 10px;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    //投稿クリックエリア(画像投稿)のCSS
+    #previews{
+      width: 100%;
+      display: flex;
+      padding-top:8px;
+
+      .input{
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        height: 48px;
+        margin: 0;
+        padding: 0 16px;
+        width: 620px;
+        height: 170px;
+        background-color: #ccc;
+        border: 1px solid silver;
+        position: relative;
+
+        .upload-label{
+          display: block;
+          float: left;
+          width: 100%;
+          height: 100%;
+
+          .input-area{
+            display: none;
+          }
+        }
+      }
+    }
+
+    // 登録中の画像サイズ
+    .preview{
+      width: 110px;
+      height: 130px;
+    }
+
+    // 画像投稿の下部の削除ボタンに関するcss
+    .lower-box {
+      display: flex;
+      width: 110px;
+
+      .delete-box {
+        text-align: center;
+        color: #00b0ff;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #eee;
+        background: #f5f5f5;
+        cursor: pointer;
+      }
+    }
+
+    // 各入力フォーム
+    .form-text {
+      border: 1px solid #ccc;
+      height: 46px;
+      width: 620px;
+      border-radius: 4px;
+      padding: 0 16px;
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
+
+    // 必須もしくは任意
+    .required {
+      background-color: red;
+      color: #fff;
+      font-size: 12px;
+      margin-left: 8px;
+      padding: 3px;
+    }
+
+    // カテゴリー入力
+    .category-select {
+      display: none;
+    }
+
+    
+    // 個数入力
+    .quantity-form{
+      display: flex;
+      margin-top: 10px;
+
+      .quantity-number {
+        text-align: right;
+        height: 40px;
+      }
+
+      span{
+        line-height: 40px;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+    }
+
+    // 登録送信ボタン
+    .send-btn {
+      text-align: center;
+      font-size: 20px;
+      width: 360px;
+      margin: 30px auto;
+
+      &__form {
+        color: white;
+        background-color: red;
+        border: 1px solid #ccc;
+        width: 100%;
+        font-size: 17px;
+        min-height: 48px;
+        padding: 0 24px;
+        cursor: pointer;
+      }
+      &__back {
+        background-color: #ccc;
+        text-align: center;
+        line-height: 50px;
+        display: block;
+        width: 100%;
+        height: 50px;
+        color: blue;
+        margin-top: 30px;
+      }
+    }
+  }
+}
