@@ -6,8 +6,9 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :remarks
       t.text :shop
       t.date :deadline
-      t.integer :quantity
+      t.integer :quantity,          null: false
       t.references :category,       null: false, foregin_key: true
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
