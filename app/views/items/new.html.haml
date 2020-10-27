@@ -37,9 +37,9 @@
         .info_box
           .info_box__name
             = f.label :消費期限
-            %span.required 必須
+            %span.optional 任意
           .info_box__form
-            = f.text_field :deadline, class: "form-text", placeholder: '40文字まで'
+            = f.date_select :deadline, with_css_classes:'deadline-date', use_month_numbers: true,start_year: 2020, end_year: (Time.now.year + 20), default: Date.new(2020, 1, 1), include_blank: true
         .info_box
           .info_box__name
             =f.label :購入店舗
@@ -56,7 +56,7 @@
         .info_box
           .info_box__name
             = f.label :備考記入欄
-            %span.required 必須
+            %span.optional 任意
           .info_box__form
             = f.text_area :remarks, class: "form-area", placeholder: "商品の説明""(色、素材、重さ、定価、注意点など)"
       .send-btn
