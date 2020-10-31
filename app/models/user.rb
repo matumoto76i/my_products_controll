@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: true
 
   has_many :items
-  
+  has_many :comments
 end
