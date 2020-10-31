@@ -133,6 +133,21 @@
           }
         }
 
+        // 登録された商品の画像
+        &__showimages{
+          margin-top: 20px;
+
+          .image-list {
+            width: 20%;
+            height: 130px;
+            border: 1px #ccc solid;
+          }
+          .image-list:first-child {
+            width: 80%;
+            height: 400px;
+          }
+        }
+
         &__table {
           border: 1px #cccccc;
           padding: 0 100px;
@@ -152,11 +167,7 @@
               text-align: start;
               line-height: 20px;
               border: 1px #cccccc solid;
-              padding: 15px;
-            }
-
-            a {
-              color: #3ccace;
+              padding: 10px;
             }
           }
         }

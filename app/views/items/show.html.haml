@@ -8,63 +8,62 @@
       .main_nav__next
         >
       .main_nav__list
-        = link_to "親カテゴリー",'/#'
+        = link_to(@item.category.parent.parent.name)
       .main_nav__next
         >
       .main_nav__list
-        = link_to "子カテゴリー",'/#'
+        = link_to( @item.category.parent.name)
       .main_nav__next
         >
       .main_nav__list
-        = link_to "孫カテゴリー",'/#'
+        = link_to( @item.category.name)
       .main_nav__next
         >
       .main_nav__list
-        商品名
+        = @item.name
     .items__main__contents
       .item_box
         .item_box__name
-          商品名
-        .item_box__images
-          .item_box__images__big
-            = image_tag "pict/sample1.jpeg", class: "list__image"
-          .item_box__images__lists
-            .image__list
-              = image_tag "pict/sample2.jpeg", class: "list__image"
-            .image__list
-              = image_tag "pict/sample2.jpeg", class: "list__image"
+          = @item.name
+        .item_box__showimages
+          - @item.images.each do |image, i|
+            = image_tag image.image.url, class: "image-list"
         .item_box__table
           %table
             %tr
               %th
-                商品名
+                登録品名
               %td
-                六甲の美味しい水
+                = @item.name
             %tr
               %th
                 カテゴリー
               %td
-                =link_to "飲料"
+                = @item.category.parent.parent.name
+                %br
+                = @item.category.parent.name
+                %br
+                = @item.category.name
             %tr
               %th
-                買ったお店
+                購入店舗
               %td
-                ドラッグストア
+                = @item.shop
             %tr
               %th
                 消費期限
               %td
-                2021年4月1日
+                = @item.deadline
             %tr
               %th
-                個数、本数
+                数量
               %td
-                6本
+                = @item.quantity
             %tr
               %th
                 備考欄
               %td
-                全部２リットルだよ
+                = @item.remarks
       .comment_box
         = form_tag root_path do
           .comment_box__contents
