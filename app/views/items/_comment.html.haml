@@ -1,0 +1,17 @@
+.comment__index
+  - if @comments
+    - @comments.each do |comment|
+      .comment__index__list
+        %p
+          = comment.text
+        .comment__index__list__date
+          = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+.comment__box
+  = form_with(model: [@item, @comment], local: true, id: "new_comment") do |f|
+    .comment__box__contents
+      = f.text_area :text, class: "comment__box__contents__form"
+      %p
+        ※サイズやコメントを残す事が出来ます。
+      %button{type: "submit", class: "comment__box__contents__btn"}
+        %i.fa.fa-comment
+          コメントをする
