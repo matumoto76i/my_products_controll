@@ -1,0 +1,65 @@
+.items_lists{
+
+  &__head{
+    h1{
+      font-size: 30px;
+      padding: 10px;
+    }
+  }
+
+  &__main{
+
+    &__list{
+      border-top: 1px #eee solid;
+
+      h1{
+        height: 20px;
+        font-size: 20px;
+        padding: 5px;
+      }
+
+      .container{
+        border-top: 1px #eee solid;
+        margin: 26px auto;
+        display: flex;
+        overflow: scroll;
+
+        &__box{
+          width: 220px;
+
+          .list__image {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+          }
+
+          .list__main{
+            background-color: white;
+            padding: 16px;
+            color: #333;
+
+            &__name{
+              overflow: hidden;
+              line-height: 1.5;
+              font-size: 16px;
+            }
+
+            &__details{
+              height: 100%;
+
+              ul{
+
+                li{
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 15px;
+                  margin: 2px 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
