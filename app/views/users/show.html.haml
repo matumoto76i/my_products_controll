@@ -13,8 +13,8 @@
   .mypage__main
     .mypage__main__btns
       .mypage__main__btns__product
-        = link_to new_item_path, method: :get do
-          .mypage__main__btns__product__left
+        .mypage__main__btns__product__left
+          = link_to new_item_path, method: :get do
             商品を登録する
         .mypage__main__btns__product__right
           = link_to "登録品一覧", '/#/'
