@@ -1,0 +1,63 @@
+// カテゴリー一覧ページ
+.categories{
+  background-color: #eee;
+
+  .categories_lists{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    overflow: scroll;
+  
+    .parents{
+      width: 100%;
+      background-color: #fff;
+      font-size: 20px;
+      border: springgreen 1px solid; 
+
+      .categories__children{
+        width: 200px;
+        word-break: keep-all;
+        border: blue 1px solid; 
+        .children{
+          padding: 5px;
+          border: blue 1px solid; 
+        }
+        
+
+        .categories__grandchildren{
+          font-size: 15px;
+          border: red 1px solid;
+
+          .child{
+            display: flex;
+            justify-content: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 子,孫カテゴリー一覧
+.category_show{
+  background-color: #eee;
+
+  .category_links{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+}
+
+.category-container{
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+  .category-index{
+    font-size: 30px;
+  }
+}

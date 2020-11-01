@@ -1,0 +1,75 @@
+.items__header
+  = render "header"
+.items
+  .items__main
+    .main_nav
+      .main_nav__list
+        = link_to "TOP",'/#'
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to(@item.category.parent.parent.name)
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to( @item.category.parent.name)
+      .main_nav__next
+        >
+      .main_nav__list
+        = link_to( @item.category.name)
+      .main_nav__next
+        >
+      .main_nav__list
+        = @item.name
+    .items__main__contents
+      .item_box
+        .item_box__name
+          = @item.name
+        .item_box__showimages
+          - @item.images.each do |image, i|
+            = image_tag image.image.url, class: "image-list"
+        .item_box__table
+          %table
+            %tr
+              %th
+                登録品名
+              %td
+                = @item.name
+            %tr
+              %th
+                カテゴリー
+              %td
+                = @item.category.parent.parent.name
+                %br
+                = @item.category.parent.name
+                %br
+                = @item.category.name
+            %tr
+              %th
+                購入店舗
+              %td
+                = @item.shop
+            %tr
+              %th
+                消費期限
+              %td
+                = @item.deadline
+            %tr
+              %th
+                数量
+              %td
+                = @item.quantity
+            %tr
+              %th
+                備考欄
+              %td
+                = @item.remarks
+      .wrapper
+        = render "comment"
+      .links
+        %li
+          = link_to "< 親カテゴリーに戻る",'/#'
+        %li
+          = link_to "商品一覧に戻る >",'/#'
+  .items__footer
+    = render "/posts/footer"

@@ -1,25 +1,105 @@
-.mypage
-  .mypage__header
-    .mypage__header__title
+.user_header
+  = render "/items/header"
+.items_lists
+  .items_lists__head
+    %h1
+      カテゴリー別登録品一覧
+  .items_lists__main
+    .items_lists__main__list
       %h1
-        = "HiBi管"
-    .mypage__header__contents
-      .mypage__header__contents__myname
-        %p
-          = "ユーザーnameさんのmypage"
-      .mypage__header__contents__out
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-  .mypage__main
-    .mypage__main__btns
-      .mypage__main__btns__product
-        .mypage__main__btns__product__left
-          = link_to "商品を登録する", '/#/'
-        .mypage__main__btns__product__right
-          = link_to "登録した商品の一覧", '/#/'
-      .mypage__main__btns__myuser
-        .mypage__main__btns__myuser__left
-          = link_to "メールアドレスの変更", '/#/'
-        .mypage__main__btns__myuser__right
-          = link_to "トップに戻る", root_path
+        食品
+      .container
+        - @item.each do |item|
+          .container__box
+            = link_to item_path(id: item.id) do
+              - ft_image = item.images.first
+              = image_tag ft_image.image.url, class: "list__image"
+              .list__main
+                .list__main__name
+                  = item.name
+                .list__main__details
+                  %ul
+                    %li 
+                      = "数量"
+                      = item.quantity
+                      = "ヶ"
+                    %li
+                      = "購入店舗"
+                      = item.shop
+                    %li
+                      = "消費期限"
+                      = item.deadline
+    .items_lists__main__list
+      %h1
+        飲料
+      .container
+        - @item.each do |item|
+          .container__box
+            = link_to item_path(id: item.id) do
+              - ft_image = item.images.first
+              = image_tag ft_image.image.url, class: "list__image"
+              .list__main
+                .list__main__name
+                  = item.name
+                .list__main__details
+                  %ul
+                    %li 
+                      = "数量"
+                      = item.quantity
+                      = "ヶ"
+                    %li
+                      = "購入店舗"
+                      = item.shop
+                    %li
+                      = "消費期限"
+                      = item.deadline
+    .items_lists__main__list
+      %h1
+        日用品
+      .container
+        - @item.each do |item|
+          .container__box
+            = link_to item_path(id: item.id) do
+              - ft_image = item.images.first
+              = image_tag ft_image.image.url, class: "list__image"
+              .list__main
+                .list__main__name
+                  = item.name
+                .list__main__details
+                  %ul
+                    %li 
+                      = "数量"
+                      = item.quantity
+                      = "ヶ"
+                    %li
+                      = "購入店舗"
+                      = item.shop
+                    %li
+                      = "消費期限"
+                      = item.deadline
+      .items_lists__main__list
+      %h1
+        防災用品
+      .container
+        - @item.each do |item|
+          .container__box
+            = link_to item_path(id: item.id) do
+              - ft_image = item.images.first
+              = image_tag ft_image.image.url, class: "list__image"
+              .list__main
+                .list__main__name
+                  = item.name
+                .list__main__details
+                  %ul
+                    %li 
+                      = "数量"
+                      = item.quantity
+                      = "ヶ"
+                    %li
+                      = "購入店舗"
+                      = item.shop
+                    %li
+                      = "消費期限"
+                      = item.deadline
 .mypage__footer
   = render "/posts/footer"

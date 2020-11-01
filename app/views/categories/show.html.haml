@@ -1,0 +1,17 @@
+.header
+  = render "/items/header"
+.category_show
+  .category_links
+    - @category_links.each do |category|
+      = link_to category.name, category_path(category)
+.category-container
+  .category-index
+    .title
+      = "#{@category.name}の商品一覧"
+      .title__border
+    -# - if @items
+    -#   %ul.lists
+    -#     = render "items/item-lists", items: @items
+    -# = paginate @items
+.footer
+  =render "/posts/footer"

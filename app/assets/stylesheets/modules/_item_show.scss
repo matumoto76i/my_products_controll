@@ -1,0 +1,163 @@
+.items{
+  background-color: #eeeeee;
+
+  &__main{
+
+    // ナビゲーション
+    .main_nav{
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+      background-color: #ffffff;
+      padding: 0px 60px;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+      line-height: 50px;
+      border-bottom: groove;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    
+      &__list {
+        padding: 10px;
+    
+        a:hover {
+          color: #3ccace;
+        }
+      }
+    }
+
+    &__contents{
+      width: 100%;
+      background-color: #eeeeee;
+
+      .item_box{
+        width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+
+        &__name{
+          text-align: center;
+          font-size: 30px;
+        }
+
+        // 登録された商品の画像
+        &__showimages{
+          margin-top: 20px;
+          text-align: center;
+
+          .image-list {
+            width: 20%;
+            height: 130px;
+            border: 1px #ccc solid;
+          }
+          .image-list:first-child {
+            width: 80%;
+            height: 400px;
+          }
+        }
+
+        &__table {
+          border: 1px #cccccc;
+          padding: 0 100px;
+
+          tr {
+            height: 20px;
+
+            th {
+              width: 152px;
+              text-align: center;
+              border: 1px #cccccc solid;
+              background-color: #eeeeee;
+            }
+
+            td {
+              width: 467px;
+              text-align: start;
+              line-height: 20px;
+              border: 1px #cccccc solid;
+              padding: 10px;
+            }
+          }
+        }
+      }
+
+      // コメント表示CSS
+      .comment__index{
+        background-color: #fff;
+        margin: 0 auto;
+        width: 800px;
+        max-height: 500px;
+        overflow: scroll;
+
+        &__list{
+          width: 600px;
+          border: 1px #3ccace solid;
+          margin: 15px auto;
+          padding-bottom: 10px;
+          text-align: start;
+        
+          p {
+            width: 600px;
+            padding: 10px;
+            
+
+            a{
+              color: #3ccace;
+            }
+          }
+          &__date{
+            color: blue;
+            
+            padding-left: 10px;
+          }
+        }
+      }
+
+      .comment__box {
+        width: 800px;
+        max-height: 300px;
+        background-color: #ffffff;
+        margin: 10px auto;
+
+        &__contents{
+          padding: 20px;
+          text-align: center;
+          
+          &__form {
+            width: 600px;
+            height: 100px;
+            padding: 5px;
+          }
+
+          p {
+            background-color: #f8f8f8;
+            text-align: start;
+            font-size: 14px;
+            margin: 10px 0px;
+            padding: 8px;
+          }
+
+          &__btn {
+            background-color: #3ccace;
+            width: 60%;
+            height: 50px;
+            color: #ffffff;
+            border: 1px #3ccace solid;
+            border-radius: 100px;
+            font-size: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .links{
+        width: 800px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

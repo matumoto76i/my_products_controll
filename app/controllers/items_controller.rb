@@ -25,6 +25,9 @@ class ItemsController < ApplicationController
     @comments = @item.comments.includes(:user)
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
 
   def get_category_children
     @category_children = Category.find(params[:parent_id]).children
