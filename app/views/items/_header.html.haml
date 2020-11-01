@@ -5,9 +5,10 @@
     %h1
       = "HiBi管"
   .header_list
-    .search__box
-      %input.search__box__input{placeholder: "商品名から探す"}
-      %button.search__box__btn{type: "submit"}
-        = link_to image_tag("icon/icon1.png",class: "seach_icon"),'/#'
+    = form_with(url: search_items_path, local: true, method: :get, class: "search__box__input") do |f|
+      .search__box
+        = f.text_field :keyword, placeholder: "商品名から探す", class: "search__box__input"
+        %button.search__box__btn{type: "submit"}
+          = image_tag("icon/icon1.png",class: "seach_icon")
     .mypage_link
       = link_to "マイページ", "/users/#{current_user.id}"
