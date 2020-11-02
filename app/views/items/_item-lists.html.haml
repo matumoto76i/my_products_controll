@@ -1,9 +1,9 @@
 .items_lists__main
   .items_lists__main__list
     .container
-      - @parents.each do |parent|
+      - items.each do |item|
         .container__box
-          = link_to item_path(id: item.id) do
+          = link_to items_path(id: item.id) do
             - ft_image = item.images.first
             = image_tag ft_image.image.url, class: "list__image"
             .list__main
