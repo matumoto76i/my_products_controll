@@ -1,0 +1,182 @@
+.edit_main__content__image{
+
+  .image-form {
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+
+  .image-icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .input {
+    display: block;
+    width: 620px;
+    height: 180px;
+  }
+
+  .image-file{
+    display: none;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price-form{
+    display: flex;
+  }
+
+  .price-number {
+    text-align: right;
+    height: 40px;
+  }
+
+  .attention {
+    margin: 40px 40px 0px;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
+  .image_box{
+    display: block;
+    margin: 16px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pre-image {
+    width: 110px;
+    height: 130px;
+  }
+
+  .preview{
+    width: 110px;
+    height: 130px;
+  }
+
+  .pre-image2{
+    width: 110px;
+    height: 160px;
+  }
+
+  .lower-box {
+    display: flex;
+    text-align: center;
+    width: 110px;
+    .edit-box {
+      color: #00b0ff;
+      width: 50%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #eee;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+  }
+
+  .delete-box {
+    color: #00b0ff;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #eee;
+    background: #f5f5f5;
+    cursor: pointer;
+  }
+
+  .update-delete_box {
+    color: #00b0ff;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #eee;
+    background: #f5f5f5;
+    cursor: pointer;
+  }
+
+  //投稿クリックエリアのCSS
+  .label-content{
+    margin-bottom: 10px;
+    width: 620px;
+    .label-box{
+      display: block;
+        border: 1px solid #ccc;
+        position: relative;
+        background: #d3d3d3;
+        width: 100%;
+        height: 162px;
+        cursor: pointer;
+    }
+  }
+
+  .prev-content{
+    display: flex;
+  }
+
+  .wrapper-box {
+    height: 130px;
+    width: 120px;
+  }
+
+  .image-preview{
+    height: 162px;
+    width: 120px;
+    margin: 0 5px;
+  }
+
+  .image-preview_box{
+    margin-left: 5px;
+  }
+
+  #previews{
+    width: 100%;
+    display: flex;
+    padding-top:8px;
+  }
+
+  .input{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 48px;
+    margin: 0;
+    padding: 0 16px;
+    width: 620px;
+    height: 170px;
+    background-color: #ccc;
+    border: 1px solid silver;
+    position: relative;
+  }
+
+  .upload-label{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  .input-area{
+    display: none;
+  }
+
+  .edit-preview{
+    width: 100%;
+    display: flex;
+  }
+
+  .hidden-destroy{
+    display: none;
+  }
+
+  .edit-upload{
+    display: none;
+  }
+
+  .add-upload{
+      display: none;
+  }
+}
+
