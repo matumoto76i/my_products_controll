@@ -6,11 +6,11 @@
 
     &__title{
       width: 800px;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
 
 
       .icon {
@@ -34,6 +34,7 @@
 
     .header_list{
       border-bottom: solid 1px #eee;
+      height: 50px;
       margin-bottom: 20px;
   
       .search__box {
@@ -43,16 +44,15 @@
 
   
         &__input {
-          width: calc(100% - 36px);
-          height: 36px;
+          width: calc(100% - 50px);
+          height: 40px;
           padding: 0 0 0 5px;
         }
   
         &__btn {
-          width: 30px;
-          height: 36px;
-          border: 0;
-          padding: 8px;
+          width: 40px;
+          height: 40px;
+          border: none;
           background-color: #3ccace;
           cursor: pointer;
   

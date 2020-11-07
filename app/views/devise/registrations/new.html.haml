@@ -1,3 +1,5 @@
+.sign_header
+  = render '/posts/header'
 .sign__main
   .sign__main__contents
     = form_for(@user, url: user_registration_path) do |f|
@@ -6,7 +8,7 @@
         新規会員情報入力
       .sign-profile__header
         %ul
-          %li ※安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません
+          %li ※登録されました情報は他のお客様に公開されることはありません
       .sign-form
         .sign-form__box
           .require

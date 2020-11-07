@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_parents, only: [:new, :create, :edit]
   before_action :set_item, only: [:destroy, :edit, :show, :update]
+  before_action :authenticate_user!
 
   def index
     @items = Item.includes(:images).order('created_at DESC')

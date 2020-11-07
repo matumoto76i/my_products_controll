@@ -1,9 +1,8 @@
 .top__header
-  .top__header__title
-    %h1
-      = "HiBi管"
-    %li
-      = "非常食・日用品をスキマ時間にシンプルに管理しよう"
+  .wrapper
+    = render 'header'
+  %li
+    = "非常食・日用品をスキマ時間に管理しよう＼＼\\٩( 'ω' )و //／／"
   .top__header__sign
     - if user_signed_in?
       .top__header__sign__btn
@@ -35,7 +34,7 @@
           = "ご利用方法"
         %ul
           %li
-            = "①　まずはアカウントの作成。メールアドレスとニックネームを入力するだけでOK"
+            = "①　まずはアカウントの作成。メールアドレスとニックネームを入力するだけでOKd(^_^o)"
           %li
             = "②　マイページで登録したい商品の名前、個数、賞味期限、写真を登録"
           %li
@@ -44,6 +43,6 @@
             = "④　登録した商品の情報は後から編集可能"
     .top__main__contents__start
       .top__main__contents__start__success
-        = link_to "早速アカウントを作成する",'/#'
+        = link_to "アカウントを作成する",'/#'
 .wrapper
   = render "footer"
