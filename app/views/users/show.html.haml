@@ -5,6 +5,12 @@
         = link_to image_tag("logo/logo1.png",class: "header_logo"),root_path
       %h1
         = "HiBi管"
+    .header_list
+      = form_with(url: search_items_path, local: true, method: :get, class: "search__box__input") do |f|
+        .search__box
+          = f.text_field :keyword, placeholder: "商品名で検索する事が出来ます", class: "search__box__input"
+          %button.search__box__btn{type: "submit"}
+            = image_tag("icon/icon1.png",class: "seach_icon")
     .mypage__header__contents
       .mypage__header__contents__myname
         = @user.nickname
