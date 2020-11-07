@@ -32,6 +32,40 @@
       }
     }
 
+    .header_list{
+      border-bottom: solid 1px #eee;
+      margin-bottom: 20px;
+  
+      .search__box {
+        height: 50px;
+        width: 800px;
+        margin: 0px auto;
+
+  
+        &__input {
+          width: calc(100% - 36px);
+          height: 36px;
+          padding: 0 0 0 5px;
+        }
+  
+        &__btn {
+          width: 30px;
+          height: 36px;
+          border: 0;
+          padding: 8px;
+          background-color: #3ccace;
+          cursor: pointer;
+  
+          .seach_icon {
+            width: 100%;
+            height: 20px;
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  
+
     &__contents{
       display: flex;
       justify-content: space-between;
