@@ -37,13 +37,13 @@ $(document).on('turbolinks:load', function(){
       })
 
 
-      if($lis.length <= 4 ){
+      if($lis.length <= 2 ){
         $ul.append(append_input)
         $('#previews li:last-child').css({
           'width': `calc(100% - (20% * ${$lis.length}))`
         })
       }
-      else if($lis.length == 5 ){
+      else if($lis.length == 3 ){
         $li.addClass('image-preview');
         $ul.append(append_input)
         $('#previews li:last-child').remove();
@@ -71,13 +71,13 @@ $(document).on('turbolinks:load', function(){
   
     $lis = $ul.find('.image-preview');
     $label = $ul.find('.input');
-    if($lis.length <= 4 ){
+    if($lis.length <= 2 ){
       $('#previews li:last-child').css({
         'width': `calc(100% - (20% * ${$lis.length}))`
       })
     }
 
-    else if($lis.length == 5 ){
+    else if($lis.length == 3 ){
       $('#previews li:last-child').css({
         'width': `100%`
       })

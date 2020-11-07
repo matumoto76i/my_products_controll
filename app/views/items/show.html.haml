@@ -64,6 +64,13 @@
                 備考欄
               %td
                 = @item.remarks
+      .btn-list
+        - if user_signed_in? && current_user.id == @item.user_id
+          .btns
+            .edit_btn
+              =link_to "登録品の情報を編集する","/items/#{@item.id}/edit", method: :get
+            .destroy_btn
+              =link_to "登録品の情報を削除する","/items/#{@item.id}", method: :delete, data: {confirm: "本当に削除しますか？"}
       .wrapper
         = render "comment"
       .links
