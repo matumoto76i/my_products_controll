@@ -1,0 +1,10 @@
+.wrapper
+  = render "header"
+.destroy__contents
+  .destroy__contents__main
+    .message
+      %h3 削除が完了しました。
+    .root-btn
+      = link_to "マイページに戻る","/users/#{current_user.id}"
+.wrapper
+  = render "/posts/footer"
