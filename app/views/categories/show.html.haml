@@ -13,5 +13,10 @@
       %ul.lists
         = render "items/item-lists", items: @items
     = paginate @items
+.links
+  %li
+    = link_to "< トップに戻る", root_path
+  %li
+    = link_to "カテゴリー一覧に戻る >", categories_path
 .footer
   =render "/posts/footer"
