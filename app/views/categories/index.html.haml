@@ -1,6 +1,7 @@
 .header
   = render "/items/header"
-%h1 カテゴリー一覧
+.categories-title
+  %h1 全カテゴリー一覧
 .categories
   .categories_lists
     - @parents.each do |parent|
@@ -16,5 +17,10 @@
               - child.children.each do |grandchild|
                 .child
                   = link_to "#{grandchild.name}", category_path(grandchild)
+.links
+  %li
+    = link_to "< トップに戻る", root_path
+  %li
+    = link_to "カテゴリー一覧に戻る >", categories_path
 .footer
   =render "/posts/footer"

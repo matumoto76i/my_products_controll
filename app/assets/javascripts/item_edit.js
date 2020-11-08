@@ -13,12 +13,12 @@ $(document).on('turbolinks:load', function(){
   
   $firstImage = $('.pre-image').length;
 
-  if($firstImage <= 4 ){
+  if($firstImage <= 2 ){
     $('.input').css({
       'width': `calc(100% - (20% * ${$firstImage}))`
     })
   }
-  else if($firstImage == 5 ){
+  else if($firstImage == 3 ){
     $('.edit-file').hide();
   }
 
@@ -29,7 +29,7 @@ $(document).on('turbolinks:load', function(){
     let src = window.URL.createObjectURL(file);
 
     let reader = new FileReader();
-    reader.readAsDataURL(file);    
+    reader.readAsDataURL(file);
     
     $targetIndex = $(this).data('index');
     $lis = ($targetIndex + 1);
@@ -37,17 +37,17 @@ $(document).on('turbolinks:load', function(){
     let count = $('.image-preview_box').length;
     let counts = (count + 1);
 
-    $ul = $('#previews')
+    $ul = $('#previews');
     $li = $(this).parents('li');
     $li.before(preview($targetIndex, src));
     console.log($lis);
-    if(counts <= 4 ){
-      $('.add-area').before(editInput($lis))
+    if(counts <= 2 ){
+      $('.add-area').before(editInput($lis));
       $('.input').css({
         'width': `calc(100% - (20% * ${counts}))`
       })
     }
-    else if(counts == 5 ){
+    else if(counts == 3 ){
       $('.input').hide();
     }
   });
@@ -63,14 +63,14 @@ $(document).on('turbolinks:load', function(){
     let count = $('.image-preview_box').length;
     let counts = (count + 1);
 
-    if(count <= 4 ){
+    if(count <= 2 ){
       console.log(count);
       $('.add-area').before(editInput($targetIndex));
       $('.edit-file').show();
       $('.input').css({
         'width': `calc(100% - (20% * ${count}))`
       })
-    }else if(counts == 5){
+    }else if(counts == 3){
       console.log(counts);
       $('.input').hide();
     }
@@ -80,7 +80,7 @@ $(document).on('turbolinks:load', function(){
   // 削除ボタンの処理
   $(".image-preview_box").on('click','.update-delete_box',function(){
       // チェックボックスの処理
-      let targetIndex = $(this).parent().parent().data('index')
+      let targetIndex = $(this).parent().parent().data('index');
 
       let hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
       if (hiddenCheck) hiddenCheck.prop('checked', true);
@@ -91,17 +91,17 @@ $(document).on('turbolinks:load', function(){
       
       $count = $('.pre-image').length;
 
-      if($count == 4){
+      if($count == 2){
         $('.edit-file').show();
         $('.input').css({
           'width' : `calc(100% - (20% * ${$count}))`
         })
-      }else if($count <= 3){
+      }else if($count <= 1){
         $('.add-upload').after(editInput($count));
         $('.input').css({
           'width' : `calc(100% - (20% * ${$count}))`
         })
-      }else if($count == 5){
+      }else if($count == 3){
         ('.edit-upload').hide();
       }
   });

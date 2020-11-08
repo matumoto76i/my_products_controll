@@ -11,30 +11,47 @@
     .parents{
       width: 100%;
       background-color: #fff;
-      font-size: 20px;
-      border: springgreen 1px solid; 
+      font-size: 30px;
+      border: springgreen 1px solid;
+      margin-right: 20px;
+      text-align: center;
 
       .categories__children{
-        width: 200px;
+        width: 250px;
         word-break: keep-all;
-        border: blue 1px solid; 
+        border: blue 1px solid;
+        font-size: 24px;
+        text-align: start;
+
         .children{
           padding: 5px;
-          border: blue 1px solid; 
+          border: yellow 1px solid;
         }
         
 
         .categories__grandchildren{
-          font-size: 15px;
+          font-size: 20px;
           border: red 1px solid;
 
           .child{
             display: flex;
             justify-content: start;
+            margin-top: 10px;
           }
         }
       }
     }
+  }
+  a:hover {
+    color: #3ccace;
+  }
+}
+
+.categories-title{
+  text-align: center;
+
+  h1{
+    font-size: 40px;
   }
 }
 
@@ -49,6 +66,9 @@
     justify-content: space-around;
     font-size: 20px;
   }
+  a:hover {
+    color: #3ccace;
+  }
 }
 
 .category-container{
@@ -60,4 +80,12 @@
   .category-index{
     font-size: 30px;
   }
+}
+
+.links{
+  width: 800px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }

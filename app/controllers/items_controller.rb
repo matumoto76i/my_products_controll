@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save!
-      redirect_to root_path
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
