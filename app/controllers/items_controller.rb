@@ -22,8 +22,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = @item.comments.includes(:user)
+    if user_signed_in? && current_user.id == @item.user_id
+      @comment = Comment.new
+      @comments = @item.comments.includes(:user)
+    else
+      redirect_to root_path
+    end
   end
 
   def search
@@ -39,14 +43,18 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @grandchild = Category.find(@item.category_id)
-    @child = @grandchild.parent
-    @parent = @child.parent
+    if user_signed_in? && current_user.id == @item.user_id
+      @grandchild = Category.find(@item.category_id)
+      @child = @grandchild.parent
+      @parent = @child.parent
+    else
+      redirect_to root_path
+    end
   end
 
   def update
     if @item.update!(item_params)
-      redirect_to root_path, notice: '登録内容を編集しました'
+      redirect_to "/users/#{current_user.id}"
     else
       render "edit"
     end
