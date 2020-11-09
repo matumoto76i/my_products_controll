@@ -9,6 +9,7 @@
     .title
       = "#{@category.name}の商品一覧"
       .title__border
+        %li ※登録品の画像をクリックすると詳細を確認できます
     - if @items
       %ul.lists
         = render "items/item-lists", items: @items
