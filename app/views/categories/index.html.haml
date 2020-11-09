@@ -13,10 +13,10 @@
             .children
               = link_to "#{child.name}", category_path(child)
               
-            .categories__grandchildren
-              - child.children.each do |grandchild|
-                .child
-                  = link_to "#{grandchild.name}", category_path(grandchild)
+            -# .categories__grandchildren
+            -#   - child.children.each do |grandchild|
+            -#     .child
+            -#       = link_to "#{grandchild.name}", category_path(grandchild)
 .links
   %li
     = link_to "< トップに戻る", root_path

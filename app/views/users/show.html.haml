@@ -25,7 +25,32 @@
           = link_to new_item_path, method: :get do
             商品を登録する
         .mypage__main__btns__product__right
-          = link_to "登録品一覧", categories_path
+          = link_to "カテゴリー一覧", categories_path
+  .my_lists__main
+    .my_lists__main__list
+      %h1 登録した商品一覧
+      .container
+        - @item.each do |item|
+          - if current_user.id == item.user_id
+            .container__box
+              = link_to item_path(item.id), method: :get do
+                - ft_image = item.images.first
+                = image_tag ft_image.image.url, class: "list__image"
+                .list__main
+                  .list__main__name
+                    = item.name
+                  .list__main__details
+                    %ul
+                      %li 
+                        = "数量"
+                        = item.quantity
+                        = "ヶ"
+                      %li
+                        = "購入店舗"
+                        = item.shop
+                      %li
+                        = "消費期限"
+                        = item.deadline
       .mypage__main__btns__myuser
         .mypage__main__btns__myuser__left
           = link_to "メールアドレスの変更", '/#/'

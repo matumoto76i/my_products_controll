@@ -67,6 +67,8 @@
   
 
     &__contents{
+      width: 850px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
 
@@ -85,10 +87,12 @@
 
       &__out{
         height: 50px;
+        width: 150px;
         font-size: 25px;
         background-color: #ff0033;
         text-align: center;
         line-height: 50px;
+        border-radius: 100px;
         color: #ffffff;
 
         a{
@@ -149,7 +153,7 @@
 
         &__right{
           width: 350px;
-          background-color: #33ff66;
+          background-color: #ccc;
           font-size: 30px;
           text-align: center;
           line-height: 50px;
@@ -163,6 +167,67 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .my_lists__main{
+    margin-top: 20px;
+    border-top: 1px #eee solid;
+
+    &__list{
+      border-bottom: 1px #eee solid;
+
+      h1{
+        text-align: center;
+        height: 50px;
+        font-size: 40px;
+        padding: 5px;
+      }
+
+      .container{
+        border-top: 1px #eee solid;
+        margin: 10px auto;
+        display: flex;
+        overflow: scroll;
+
+        &__box{
+          width: 240px;
+          padding: 10px;
+          background-color: #eee;
+
+          .list__image {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+          }
+
+          .list__main{
+            background-color: white;
+            padding: 16px;
+            color: #333;
+
+            &__name{
+              overflow: hidden;
+              line-height: 1.5;
+              font-size: 16px;
+            }
+
+            &__details{
+              height: 100%;
+
+              ul{
+
+                li{
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 15px;
+                  margin: 2px 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
