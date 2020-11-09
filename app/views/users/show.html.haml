@@ -26,12 +26,6 @@
             商品を登録する
         .mypage__main__btns__product__right
           = link_to "カテゴリー一覧", categories_path
-  
-      .mypage__main__btns__myuser
-        .mypage__main__btns__myuser__left
-          = link_to "メールアドレスの変更", '/#/'
-        .mypage__main__btns__myuser__right
-          = link_to "トップに戻る", root_path
   .my_lists__main
     .my_lists__main__list
       %h1 登録した商品一覧
@@ -56,5 +50,11 @@
                         = item.shop
                       %li
                         = "消費期限"
+                        = item.deadline
+      .mypage__main__btns__myuser
+        .mypage__main__btns__myuser__left
+          = link_to "メールアドレスの変更", '/#/'
+        .mypage__main__btns__myuser__right
+          = link_to "トップに戻る", root_path
 .mypage__footer
   = render "/posts/footer"
