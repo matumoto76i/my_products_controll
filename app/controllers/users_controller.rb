@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @item = Item.all
-  end  
+    if @user == current_user
+      @item = Item.all
+    else
+      redirect_to root_path
+    end
+  end
 end
