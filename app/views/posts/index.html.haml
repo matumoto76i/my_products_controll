@@ -34,7 +34,7 @@
           = "ご利用方法"
         %ul
           %li
-            = "①　まずはアカウントの作成。メールアドレスとニックネーム、パスワードを登録するだけでOKd(^_^o)"
+            = "①　まずはアカウントの作成。メールアドレスとニックネーム、パスワードを登録するだけでOK"
           %li
             = "②　マイページから商品登録のページに移動し、登録したい商品の名前、個数、写真などを登録"
           %li
@@ -45,6 +45,6 @@
             = "⑤　登録した商品はカテゴリー一覧、登録商品一覧、検索窓から確認する事が出来ます。"
     .top__main__contents__start
       .top__main__contents__start__success
-        = link_to "アカウントを作成する",'/#'
+        = link_to "アカウントを作成する", new_user_registration_path, method: :get
 .wrapper
   = render "footer"

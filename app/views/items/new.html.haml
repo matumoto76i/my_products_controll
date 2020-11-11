@@ -51,7 +51,7 @@
             = f.label :数量
             %span.required 必須
           .quantity-form
-            = f.number_field :quantity, placeholder: "0", class: "quantity-number"
+            = f.number_field :quantity, placeholder: "0", min: "0", max: "9999", class: "quantity-number"
             %span 個
         .info_box
           .info_box__name
@@ -59,6 +59,8 @@
             %span.optional 任意
           .info_box__form
             = f.text_area :remarks, class: "form-area", placeholder: "商品の説明""(色、素材、重さ、定価、注意点など)"
+      .note_comment
+        %li ※免許証やキャッシュカードなど悪用される恐れのある内容の登録はしないようにお願い致します
       .send-btn
         = f.submit 'この内容で登録する', class: "send-btn__form"
         = link_to 'トップにもどる', root_path, class: "send-btn__back"
