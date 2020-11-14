@@ -2,33 +2,5 @@
   = render "/items/header"
 .items_lists
   .items_lists__head
-    %h1
-      登録品一覧
-  .items_lists__main
-    .items_lists__main__list
-      %h1
-        食品
-      .container
-        - @item.each do |item|
-          .container__box
-            = link_to item_path(id: item.id) do
-              - ft_image = item.images.first
-              = image_tag ft_image.image.url, class: "list__image"
-              .list__main
-                .list__main__name
-                  = item.name
-                .list__main__details
-                  %ul
-                    %li 
-                      = "数量"
-                      = item.quantity
-                      = "ヶ"
-                    %li
-                      = "購入店舗"
-                      = item.shop
-                    %li
-                      = "消費期限"
-                      = item.deadline
-    
 .mypage__footer
   = render "/posts/footer"

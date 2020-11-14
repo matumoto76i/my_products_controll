@@ -4,11 +4,11 @@
   .sign__main__contents
     = form_for(@user, url: user_registration_path) do |f|
       = render "devise/shared/error_messages", resource: @user
-      .sign-main__header
+      .sign__main__contents__header
         新規会員情報入力
-      .sign-profile__header
+      .sign__main__contents__head
         %ul
-          %li ※登録されました情報は他のお客様に公開されることはありません
+          %li ※登録されました情報は他のユーザーに公開されることはありません。
       .sign-form
         .sign-form__box
           .require
@@ -16,26 +16,31 @@
             %span.require__form 必須
           .input_form
             = f.text_field :nickname, autofocus: true, class: "form_text", placeholder: "例)サンプル一郎"
+          .sign-form__box__note
+            %li ※8文字以下のニックネームをお願い致します。
         .sign-form__box
           .require
             %span.require__list メールアドレス
             %span.require__form 必須
           .input_form
             = f.email_field :email, class: "form_text", placeholder: "@,ドメイン必須になります" , autofocus: true, autocomplete: "email"
+          .sign-form__box__note
+            %li ※会員登録確認メールやメルマガなどの送信・配信はありません。
         .sign-form__box
           .require
             %span.require__list パスワード
             %span.require__form 必須
           .input_form
-            = f.password_field :password, class: "form_text", placeholder: "英数字含む７文字以上" , autocomplete: "new-password"
+            = f.password_field :password, class: "form_text", placeholder: "英数字含む8文字以上" , autocomplete: "new-password"
+          .sign-form__box__note
+            %li ※個人が特定される様な内容のパスワードは避けるようにお願いします。
         .sign-form__box
           .require
             %span.require__list 確認用パスワード
             %span.require__form 必須
           .input_form
-            = f.password_field :password_confirmation, class: "form_text", placeholder: "確認の為、再度パスワードを入力" , autocomplete: "new-password"
-        %li ※英字と数字の両方を含めて入力してください
+            = f.password_field :password_confirmation, class: "form_text", placeholder: "確認の為、再度パスワードを入力して下さい" , autocomplete: "new-password"
         .actions
-          = f.submit "登録する", class: "submit-btn"
+          = f.submit "この内容で登録する", class: "submit-btn"
 .sign-footer
   = render "posts/footer"

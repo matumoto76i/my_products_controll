@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @item = Item.all
   end
 
   def show
