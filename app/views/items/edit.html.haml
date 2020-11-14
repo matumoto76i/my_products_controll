@@ -68,7 +68,7 @@
             = f.label :数量
             %span.required 必須
           .quantity-form
-            = f.number_field :quantity, placeholder: "0", class: "quantity-number"
+            = f.number_field :quantity, placeholder: "0", min: "0", max: "9999", class: "quantity-number"
             %span 個
         .info_box
           .info_box__name

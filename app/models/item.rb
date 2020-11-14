@@ -7,7 +7,7 @@ class Item < ApplicationRecord
 
   validates :images, presence: true
   validates :name, presence: true, length: {maximum: 40}
-  validates :quantity, presence: true
+  validates :quantity, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 9999}
 
   def self.search(search)
     return Item.all unless search
