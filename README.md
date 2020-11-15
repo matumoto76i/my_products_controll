@@ -5,13 +5,38 @@ application up and running.
 
 Things you may want to cover:
 
+* name
+  my_product_controll
+
+* Production environment
+  - AWS,mysql57,S3
+  - URL http://18.178.80.130/
+
+* Overview
+  このアプリではユーザー登録、画像,テキスト,カテゴリーの登録・編集・削除が出来ます。
+
+* Production intention
+  このアプリを作成した背景としては、自身がスーパーなど買い物に行った際に、買い忘れや必要以上に買い過ぎる事があるので、日用品や食料品を手軽に管理できるツールあれば便利ではないかと考え作成しました。
+
+* DEMO
+  https://gyazo.com/b97846f859bf5131b3b0b33a39dafbe5
+  https://gyazo.com/cb1dd37b733ad924c947ca44ddea9662
+
+* Ingenuity
+  ユーザー目線で考えて、アカウントの作成や機能はシンプルに。
+  いくら技術の高い機能でもユーザーが使うかどうか分からない実装をするより、視覚的にも直感的にも使いやすいいくつかのシンプルな機能の実装をする事を考えました。
+
+* Task
+  消費期限３年以上の食料品において、消費期限までの日数が100日を切った場合にメールやマイページで通知をする機能の実装を考えています。
+
+* Technology used
+  テキストエディタ:VSコード, 使用言語:Ruby,rails,javascript,haml,html,scss
+  mysql2,GitHub,Google Chrome
+
 * Ruby version
+  2.5.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
+# * Database creation
 
 # users_table
 
@@ -63,6 +88,19 @@ Things you may want to cover:
 
 ## Association
 - belongs_to :item
+
+# comments_table
+
+| column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| text   | text       |
+| user   | references | null: false, foregin_key: true |
+| item   | references | null: false, foregin_key: true |
+
+## Association
+
+- has_many :user
+- has_many :item
 
 * Database initialization
 
