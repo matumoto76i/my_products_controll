@@ -20,7 +20,7 @@ Things you may want to cover:
 
 # DEMO
   - https://gyazo.com/b97846f859bf5131b3b0b33a39dafbe5
-  - https://gyazo.com/cb1dd37b733ad924c947ca44ddea9662
+  - ![](https://i.gyazo.com/cb1dd37b733ad924c947ca44ddea9662.png)
 
 # Ingenuity
   - ユーザー目線で考えて、アカウントの作成や機能はシンプルに。
