@@ -33,9 +33,6 @@ Things you may want to cover:
   - テキストエディタ:VSコード, 使用言語:Ruby,rails,javascript,haml,html,scss
   mysql2,GitHub,Google Chrome
 
-* Ruby version
-  2.5.1
-
 # Database creation
 
 # users_table
