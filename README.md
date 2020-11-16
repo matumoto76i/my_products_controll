@@ -19,7 +19,7 @@ Things you may want to cover:
   - このアプリを作成した背景としては、自身がスーパーなど買い物に行った際に、買い忘れや必要以上に買い過ぎる事があるので、日用品や食料品を手軽に管理できるツールあれば便利ではないかと考え作成しました。
 
 # DEMO
-  - ![demo](https://raw.github.com/wiki/matumoto76i/my_products_controll/gif/image.gif)
+  - ![image](https://user-images.githubusercontent.com/66428722/99243629-4aa2c300-2844-11eb-9477-65330d0ebe43.gif)
 
   - ![sample](https://i.gyazo.com/cb1dd37b733ad924c947ca44ddea9662.png)
 
