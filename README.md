@@ -5,12 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-# name
+# Appname
   my_product_controll
 
 # Production environment
-  - AWS,mysql57,S3
-  - URL http://18.178.80.130/
+  - AWS,　mysql57,　S3
+  - URL　http://18.178.80.130/
 
 # Overview
   - このアプリではアカウント登録を行い、日用品や食料品、防災用品などの画像やテキスト,カテゴリーなどを登録し在庫の管理を行う事が出来ます。
@@ -32,11 +32,11 @@ Things you may want to cover:
   いくら技術の高い機能でもユーザーが使うかどうか分からない実装をするより、視覚的にも直感的にも使いやすいいくつかのシンプルな機能の実装をする事を考えました。
 
 # Task
-  - 消費期限３年以上の食料品において、消費期限までの日数が100日を切った場合にメールやマイページで通知をする機能の実装を考えています。
+  - 今後は消費期限３年以上の食料品において、消費期限までの日数が100日を切った場合にメールやマイページで通知をする機能の実装を出来ればと考えています。
 
-# Technology used
-  - テキストエディタ:VSコード, 使用言語:Ruby,rails,javascript,haml,html,scss
-  mysql2,GitHub,Google Chrome
+# Development environment
+  - エディタ：VScode,　使用言語：Ruby,　Rails,　javascript,　haml,　html,　scss
+  db：mysql2,　管理ツール：GitHub,　挙動確認：Google Chrome
 
 # Database creation
 
