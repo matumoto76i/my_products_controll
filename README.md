@@ -33,6 +33,7 @@ Things you may want to cover:
 
 # Task
   - 今後は消費期限３年以上の食料品において、消費期限までの日数が100日を切った場合にメールやマイページで通知をする機能の実装を出来ればと考えています。
+  - iphoneやスマートフォンでも使いやすいように調整していく事を考えています。
 
 # Development environment
   - エディタ：VScode,　使用言語：Ruby,　Rails,　javascript,　haml,　html,　scss
